@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="urlsApp.Controller">
+  <children>
+    <SplitPane dividerPositions="0.8065326633165829" focusTraversable="true" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="213.0" prefWidth="598.0">
+          <children>
+            <SplitPane dividerPositions="0.27531645569620256" focusTraversable="true" orientation="VERTICAL" prefHeight="300.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane fx:id="mainPane" minHeight="0.0" minWidth="0.0" prefHeight="80.99990844726562" prefWidth="596.0" style="-fx-background-color:PapayaWhip;">
+                  <children>
+                    <TextField fx:id="typeURL" layoutX="184.0" layoutY="16.0" prefHeight="34.0" prefWidth="295.0" style="-fx-border-color:black;&#10;-fx-background-color:PapayaWhip;&#10;" />
+                    <Label layoutX="28.0" layoutY="23.0" prefHeight="27.0" prefWidth="138.0" text="Type in your URL :">
+                      <font>
+                        <Font name="Arial Black" size="12.0" fx:id="x1" />
+                      </font>
+                    </Label>
+                    <Button fx:id="GoButton1" font="$x1" layoutX="492.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#newURLButtonHandler" text="Go!" />
+                    <Label fx:id="currentSite" font="$x1" layoutX="28.0" layoutY="59.0" prefHeight="19.0" prefWidth="506.0" text="" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="">
+                  <children>
+                    <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="200.0" prefWidth="596.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color:PowderBlue;">
+                          <children>
+                            <ListView fx:id="historyList" layoutX="29.0" layoutY="26.0" prefHeight="193.0" prefWidth="200.0" style="-fx-border-color:black;" />
+                            <Label font="$x1" layoutX="87.0" layoutY="3.0" prefHeight="27.0" prefWidth="85.0" text="History :" />
+                            <Button id="goButton2" fx:id="GoButton2" font="$x1" layoutX="242.0" layoutY="197.0" mnemonicParsing="false" onMouseClicked="#historyButtonHandler" prefWidth="51.999900000002526" text="Go!" />
+                            <Button id="prevSite" fx:id="PrevButton" font="$x1" layoutX="29.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#prevButtonHandler" text="&lt;-" />
+                          </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color:PowderBlue;">
+                          <children>
+                            <ListView fx:id="linksList" layoutX="35.0" layoutY="25.0" prefHeight="194.0" prefWidth="200.0" style="-fx-border-color:black;" />
+                            <Label font="$x1" layoutX="66.0" layoutY="5.0" prefHeight="27.0" prefWidth="138.0" text="Links here :" />
+                            <Button id="goButton3" fx:id="GoButton3" font="$x1" layoutX="247.0" layoutY="197.0" mnemonicParsing="false" onMouseClicked="#linksButtonHandler" prefWidth="47.0" text="Go!" />
+                          </children>
+                        </AnchorPane>
+                      </items>
+                    </SplitPane>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="125.0" prefWidth="598.0" style="-fx-background-color:pink;">
+          <children>
+            <Label font="$x1" layoutX="21.0" layoutY="11.0" prefHeight="27.0" prefWidth="124.0" text="Images counter :" />
+            <Label font="$x1" layoutX="412.0" layoutY="11.0" prefHeight="27.0" prefWidth="113.0" text="Links counter:" />
+            <Label font="$x1" layoutX="230.0" layoutY="16.0" prefWidth="124.0" text="Size of images:" />
+            <Label id="ImgCounter" fx:id="imgCounter" layoutX="21.0" layoutY="46.0" minHeight="19.0" prefHeight="19.0" prefWidth="110.0" style="-fx-border-color:black;" text="">
+              <font>
+                <Font name="Arial" size="16.0" fx:id="x2" />
+              </font>
+            </Label>
+            <Label fx:id="sizeOfImg" font="$x2" layoutX="230.0" layoutY="46.0" minHeight="19.0" prefHeight="19.0" prefWidth="110.0" style="-fx-border-color:black;" text="" />
+            <Label id="URLsCounter" fx:id="linksCounter" font="$x2" layoutX="412.0" layoutY="46.0" minHeight="19.0" prefHeight="19.0" prefWidth="99.0" style="-fx-border-color:black;" text="" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
